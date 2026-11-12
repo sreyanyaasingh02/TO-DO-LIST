@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="todo-container">
+        <header class="page-header">
+            <p class="eyebrow">A little more organised</p>
+            <h1>My To-Do List</h1>
+            <p class="subtitle">Add your tasks and keep track of your day.</p>
+        </header>
+
+        <section class="todo-card" aria-label="To-do list">
+            <form id="task-form" class="task-form">
+                <label class="sr-only" for="task-input">Enter a task</label>
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="What do you need to do?"
+                    maxlength="100"
+                    autocomplete="off"
+                >
+                <button type="submit" class="add-button">Add Task</button>
+            </form>
+
+            <p id="message" class="message" role="status" aria-live="polite"></p>
+
+            <div class="list-heading">
+                <h2>My tasks</h2>
+                <span id="task-count" class="task-count">0 tasks</span>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+            <p id="empty-state" class="empty-state">No tasks yet. Add one above!</p>
+        </section>
+
+        <footer class="page-footer">
+            <p>Small steps make a productive day ✨</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
